@@ -26,7 +26,7 @@ public class MonitoramentoGUI extends javax.swing.JFrame {
         atualizarMemoria();
         //atualizarProcessos();
         atualizarRede();
-        //atualizarDispositivosDeArmazenamento();
+        atualizarDispositivosDeArmazenamento();
         
         Timer timer = new Timer(1000, (ActionEvent e) -> {
             atualizarCpu();
