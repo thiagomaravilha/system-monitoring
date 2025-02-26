@@ -30,8 +30,8 @@ public class Monitoramento {
             
             // Processos
             System.out.println("\nProcessos em execucao:");
-            for (OSProcess processo : processInfo.getTopProcessos(0)) {
-                System.out.printf("PID: %d | Nome: %s\n", processo.getProcessID(), processo.getName());
+            for (String process : ProcessInfo.getProcesses()) {
+                System.out.println(process);
             }
             
             // Armazenamento
@@ -42,11 +42,21 @@ public class Monitoramento {
             }
             
             // Rede
-            double velocidadeInternet = networkInfo.medirVelocidadeInternet();
-            if (velocidadeInternet != -1) {
-                System.out.printf("\nVelocidade de Download: %.2f Mbps\n", velocidadeInternet);
+            
+            // Medir velocidade de Download
+            double velocidadeDownload = networkInfo.medirVelocidadeDownload();
+            if (velocidadeDownload != -1) {
+                System.out.printf("\nVelocidade de Download: %.2f Mbps\n", velocidadeDownload);
             } else {
-                System.out.println("\nErro ao medir a velocidade da internet.");
+                System.out.println("\nErro ao medir a velocidade de Download.");
+            }
+
+            // Medir velocidade de Upload
+            double velocidadeUpload = networkInfo.medirVelocidadeUpload();
+            if (velocidadeUpload != -1) {
+                System.out.printf("Velocidade de Upload: %.2f Mbps\n", velocidadeUpload);
+            } else {
+                System.out.println("Erro ao medir a velocidade de Upload.");
             }
             
             System.out.println("-----------------------------------\n");

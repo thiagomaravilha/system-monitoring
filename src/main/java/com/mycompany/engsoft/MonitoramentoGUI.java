@@ -24,14 +24,14 @@ public class MonitoramentoGUI extends javax.swing.JFrame {
         initComponents();
         atualizarCpu();
         atualizarMemoria();
-        //atualizarProcessos();
+        atualizarProcessos();
         atualizarRede();
         atualizarDispositivosDeArmazenamento();
         
         Timer timer = new Timer(1000, (ActionEvent e) -> {
             atualizarCpu();
             atualizarMemoria();
-            //atualizarProcessos();
+            atualizarProcessos();
             atualizarRede();
             atualizarDispositivosDeArmazenamento();
         });
@@ -73,6 +73,8 @@ public class MonitoramentoGUI extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -232,9 +234,9 @@ public class MonitoramentoGUI extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,8 +244,8 @@ public class MonitoramentoGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel9)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Processos", jPanel3);
@@ -258,6 +260,9 @@ public class MonitoramentoGUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel12.setText("Velocidade de Upload");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -265,8 +270,11 @@ public class MonitoramentoGUI extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE))
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(229, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -276,7 +284,11 @@ public class MonitoramentoGUI extends javax.swing.JFrame {
                 .addComponent(jLabel10)
                 .addGap(18, 18, 18)
                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(256, Short.MAX_VALUE))
+                .addGap(39, 39, 39)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(124, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Rede", jPanel4);
@@ -298,9 +310,9 @@ public class MonitoramentoGUI extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,8 +320,8 @@ public class MonitoramentoGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel11)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Dispositivos de Armazenamento", jPanel5);
@@ -385,6 +397,7 @@ public class MonitoramentoGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -411,6 +424,7 @@ public class MonitoramentoGUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 
     
@@ -446,35 +460,40 @@ private void atualizarMemoria() {
     
 }
 
-private void atualizarProcessos(){
-    ProcessInfo processInfo = new ProcessInfo();
-    List<OSProcess> processos = processInfo.getTopProcessos(10);
+private void atualizarProcessos() {
+    List<String> processos = ProcessInfo.getProcesses();
 
     DefaultListModel<String> modeloLista = new DefaultListModel<>();
 
-    for (OSProcess processo : processos) {
-        modeloLista.addElement(String.format("PID: %d - %s",
-                processo.getProcessID(),
-                processo.getName()));
+    for (String processo : processos) {
+        modeloLista.addElement(processo);
     }
 
     jList2.setModel(modeloLista);
-
 }
 
 
-private void atualizarRede(){
+private void atualizarRede() {
     NetworkInfo networkInfo = new NetworkInfo();
 
-    double velocidade = networkInfo.medirVelocidadeInternet();
+    double velocidadeDownload = networkInfo.medirVelocidadeDownload();
+    double velocidadeUpload = networkInfo.medirVelocidadeUpload();
 
-    // Verificar se a medição foi bem-sucedida
-    if (velocidade != -1) {
-        jTextField6.setText(String.format("%.2f Mbps", velocidade));
+    // Atualizar campo de download
+    if (velocidadeDownload != -1) {
+        jTextField6.setText(String.format("%.2f Mbps", velocidadeDownload));
     } else {
         jTextField6.setText("Erro ao medir");
     }
+
+    // Atualizar campo de upload
+    if (velocidadeUpload != -1) {
+        jTextField7.setText(String.format("%.2f Mbps", velocidadeUpload));
+    } else {
+        jTextField7.setText("Erro ao medir");
+    }
 }
+
 
 
 private void atualizarDispositivosDeArmazenamento() {
