@@ -1,13 +1,13 @@
+//Classe usada para os testes iniciais via console.
+
 package com.mycompany.engsoft;
 
 import oshi.hardware.HWDiskStore;
-import oshi.software.os.OSProcess;
 
 public class Monitoramento {
     public static void main(String[] args) throws InterruptedException {
         CPUInfo cpuInfo = new CPUInfo();
         MemoryInfo memoryInfo = new MemoryInfo();
-        ProcessInfo processInfo = new ProcessInfo();
         StorageInfo storageInfo = new StorageInfo();
         NetworkInfo networkInfo = new NetworkInfo();
         
