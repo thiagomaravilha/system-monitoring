@@ -1,4 +1,4 @@
-# 🖥️ Monitoramento do Sistema - Engenharia de Software I
+# 🖥️ Monitoramento do Sistema
 
 ## 📌 Sobre o Projeto
 
